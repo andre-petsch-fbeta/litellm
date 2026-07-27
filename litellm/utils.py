@@ -8688,6 +8688,10 @@ class ProviderConfigManager:
             from litellm.llms.runwayml.videos.transformation import RunwayMLVideoConfig
 
             return RunwayMLVideoConfig()
+        elif LlmProviders.HOSTED_VLLM == provider:
+            from litellm.llms.hosted_vllm.videos.transformation import HostedVLLMVideoConfig
+
+            return HostedVLLMVideoConfig()
         return None
 
     @staticmethod
